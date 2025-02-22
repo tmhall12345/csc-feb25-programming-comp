@@ -1,0 +1,19 @@
+import tkinter as tk
+
+window = tk.Tk()
+window.title("Simple GUI")
+
+butNum = 0
+
+def clicked():
+    global butNum
+    butNum += 1
+    label.config(text=f"Clicked {butNum} times!")
+
+button = tk.Button(window, text="Click me!", command=clicked)
+button.pack()
+
+label = tk.Label(window, text=f"Clicked {butNum} times!")
+label.pack()
+
+window.mainloop()
